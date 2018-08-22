@@ -1,0 +1,27 @@
+@font-face{
+    font-family:'Europe';
+    src: url('EuropeItalic.ttf');
+}
+
+@font-face{
+    font-family:'Algeria One';
+    src: url('AlgeriaOne.ttf');
+}
+
+@font-face{
+    font-family:'Packard Modern';
+    src: url('PackardModern.ttf');
+}
+
+#labelTitle{
+    -fx-font-family: "Algeria One";
+}
+
+.label{
+    -fx-font-family: "Europe";
+}
+
+.button{
+    -fx-font-size: 20 px;
+    -fx-font-family: "Europe";
+}

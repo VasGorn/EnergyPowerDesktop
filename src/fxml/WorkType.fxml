@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.WorkTypeWindow">
+   <children>
+      <VBox layoutX="206.0" layoutY="69.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="Список всех видов работ">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="Вид работ:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="tfWorkType" prefHeight="32.0" prefWidth="258.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="305.0" prefWidth="600.0" spacing="30.0">
+               <children>
+                  <ListView fx:id="lvWorkType" onMouseClicked="#lvLeftClicked" prefHeight="299.0" prefWidth="262.0" />
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="145.0" spacing="30.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#btnAddWorkTypeClicked" text="Добавить">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnEditWorkTypeClicked" text="Изменить">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnDeleteTypeClicked" text="Удалить">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

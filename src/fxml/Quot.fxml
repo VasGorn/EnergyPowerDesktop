@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Qout">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="225.0" layoutY="113.0" prefHeight="600.0" prefWidth="550.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label text="Заказ:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbNameOrder" prefHeight="30.0" prefWidth="150.0" promptText="Выберете заказ...">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Button mnemonicParsing="false" onAction="#btnListOrdersClicked" text="Список заказов">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label text="Менеджер:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfManager" editable="false">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="MAX, часы:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfMaxHours" editable="false" prefHeight="26.0" prefWidth="91.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <GridPane alignment="CENTER" prefHeight="78.0" prefWidth="550.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="268.0" minWidth="10.0" prefWidth="129.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="421.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Описание:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Адрес:" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfDescription" editable="false" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="tfAddress" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </GridPane>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label text="Должность:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbPosition" prefHeight="30.0" prefWidth="110.0" />
+                  <Label text="Сотрудник:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbWorkers" prefHeight="30.0" prefWidth="168.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label text="Месяц:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbMonth" prefHeight="30.0" prefWidth="110.0">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label text="Часы:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfHours" prefHeight="26.0" prefWidth="80.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <Button fx:id="btnWrite" mnemonicParsing="false" onAction="#btnWriteClicked" text="Записать">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ScrollPane>
+               <content>
+                  <TreeTableView fx:id="ttvQouts" prefHeight="260.0" prefWidth="977.0">
+                    <columns>
+                      <TreeTableColumn fx:id="colEmployee" prefWidth="200.0" text="ФИО" />
+                      <TreeTableColumn fx:id="colJanuary" prefWidth="75.0" text="Январь" />
+                        <TreeTableColumn fx:id="colFebruary" prefWidth="75.0" text="Февраль" />
+                        <TreeTableColumn fx:id="colMarch" prefWidth="75.0" text="Март" />
+                        <TreeTableColumn fx:id="colApril" prefWidth="75.0" text="Апрель" />
+                        <TreeTableColumn fx:id="colMay" prefWidth="75.0" text="Май" />
+                        <TreeTableColumn fx:id="colJune" prefWidth="75.0" text="Июнь" />
+                        <TreeTableColumn fx:id="colJuly" prefWidth="75.0" text="Июль" />
+                        <TreeTableColumn fx:id="colAugust" prefWidth="75.0" text="Август" />
+                        <TreeTableColumn fx:id="colSeptember" prefWidth="75.0" text="Сентябрь" />
+                        <TreeTableColumn fx:id="colOctober" prefWidth="75.0" text="Октябрь" />
+                        <TreeTableColumn fx:id="colNovember" prefWidth="75.0" text="Ноябрь" />
+                        <TreeTableColumn fx:id="colDecember" prefWidth="75.0" text="Декабрь" />
+                    </columns>
+                  </TreeTableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

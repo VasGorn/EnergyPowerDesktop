@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.WorkTime">
+   <children>
+      <HBox alignment="CENTER" layoutX="20.0" layoutY="12.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label text="Номер заказа">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <ComboBox fx:id="cbNameOrder" prefHeight="26.0" prefWidth="139.0" promptText="Выберите заказ">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ComboBox>
+            <TabPane prefHeight="59.0" prefWidth="363.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Адресс">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="lbAddress" layoutX="85.0" layoutY="11.0" prefHeight="33.0" prefWidth="344.0" text="ТекстАдресса" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Описание">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="lbDescription" layoutX="75.0" layoutY="8.0" prefHeight="33.0" prefWidth="344.0" text="ТекстОписания" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Менеджер">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="lbManager" layoutX="19.0" prefHeight="30.0" prefWidth="363.0" text="имяМенеджера" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <ScrollPane layoutX="10.0" layoutY="494.0" prefHeight="321.0" prefWidth="658.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="494.0">
+         <content>
+            <TableView fx:id="workTable">
+              <columns>
+                <TableColumn fx:id="colEmloyee" prefWidth="103.0" text="ФИО" />
+                <TableColumn fx:id="colDay1" prefWidth="63.0" text=" 1&#10;" />
+                  <TableColumn fx:id="colDay2" prefWidth="64.0" text=" 2&#10;" />
+                  <TableColumn fx:id="colDay3" prefWidth="64.0" text=" 3&#10;" />
+                  <TableColumn fx:id="colDay4" prefWidth="64.0" text=" 4&#10;" />
+                  <TableColumn fx:id="colDay5" prefWidth="64.0" text=" 5&#10;" />
+                  <TableColumn fx:id="colDay6" prefWidth="64.0" text=" 6&#10;" />
+                  <TableColumn fx:id="colDay7" prefWidth="63.0" text="7&#10;" />
+                  <TableColumn fx:id="colDay8" prefWidth="63.0" text="8&#10;" />
+                  <TableColumn fx:id="colDay9" prefWidth="63.0" text="9&#10;" />
+                  <TableColumn fx:id="colDay10" prefWidth="63.0" text="10&#10;" />
+                  <TableColumn fx:id="colDay11" prefWidth="63.0" text="11&#10;" />
+                  <TableColumn fx:id="colDay12" prefWidth="63.0" text="12&#10;" />
+                  <TableColumn fx:id="colDay13" prefWidth="63.0" text="13&#10;" />
+                  <TableColumn fx:id="colDay14" prefWidth="63.0" text="14&#10;" />
+                  <TableColumn fx:id="colDay15" prefWidth="63.0" text="15&#10;" />
+                  <TableColumn fx:id="colDay16" prefWidth="63.0" text="16&#10;" />
+                  <TableColumn fx:id="colDay17" prefWidth="63.0" text="17&#10;" />
+                  <TableColumn fx:id="colDay18" prefWidth="63.0" text="18&#10;&#10;" />
+                  <TableColumn fx:id="colDay19" prefWidth="63.0" text="19&#10;&#10;" />
+                  <TableColumn fx:id="colDay20" prefWidth="63.0" text="20&#10;&#10;" />
+                  <TableColumn fx:id="colDay21" prefWidth="63.0" text="21&#10;&#10;" />
+                  <TableColumn fx:id="colDay22" prefWidth="63.0" text="22&#10;" />
+                  <TableColumn fx:id="colDay23" prefWidth="63.0" text="23&#10;" />
+                  <TableColumn fx:id="colDay24" prefWidth="63.0" text="24&#10;" />
+                  <TableColumn fx:id="colDay25" prefWidth="63.0" text="25&#10;&#10;" />
+                  <TableColumn fx:id="colDay26" prefWidth="63.0" text="26&#10;" />
+                  <TableColumn fx:id="colDay27" prefWidth="63.0" text="27&#10;" />
+                  <TableColumn fx:id="colDay28" prefWidth="63.0" text="28&#10;" />
+                  <TableColumn fx:id="colDay29" prefWidth="63.0" text="29&#10;" />
+                  <TableColumn fx:id="colDay30" prefWidth="63.0" text="30&#10;" />
+                  <TableColumn fx:id="colDay31" prefWidth="63.0" text="31&#10;&#10;" />
+              </columns>
+               <opaqueInsets>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </opaqueInsets>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="89.0" prefHeight="60.0" prefWidth="658.0" spacing="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <opaqueInsets>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </opaqueInsets>
+         <children>
+            <Label alignment="CENTER" text="Кол-во часов&#10;по заказу в целом" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfMaxHours" editable="false" prefHeight="40.0" prefWidth="60.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </TextField>
+            <Label alignment="CENTER" text="Кол-во часов&#10;в текущем месяце" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCurrHours" editable="false" prefHeight="40.0" prefWidth="60.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </TextField>
+            <Label alignment="CENTER" text="Остаток&#10;по часам" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfLeftHours" editable="false" prefHeight="40.0" prefWidth="60.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="239.0" layoutY="149.0" prefHeight="79.0" prefWidth="658.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="120.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" text="Ф.И.О. сотрудника" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbTeam" prefHeight="25.0" prefWidth="238.0" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" text="День месяца" textAlignment="CENTER" GridPane.columnIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbDayMonth" prefHeight="25.0" prefWidth="91.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" text="Вид работ" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbTypeWork" prefHeight="25.0" prefWidth="223.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <opaqueInsets>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </opaqueInsets>
+      </GridPane>
+      <HBox alignment="CENTER" layoutX="239.0" layoutY="232.0" prefHeight="50.0" prefWidth="658.0" spacing="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Label alignment="CENTER" text="Время работы, часы" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbWorkHours" prefHeight="25.0" prefWidth="70.0">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </ComboBox>
+            <Label alignment="CENTER" text="Перерабока, часы" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbOverHours" prefHeight="25.0" prefWidth="70.0">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </ComboBox>
+         </children>
+      </HBox>
+      <Label fx:id="lbDate" alignment="CENTER" layoutX="272.0" layoutY="460.0" prefHeight="25.0" prefWidth="134.0" text="MONTH, YYYY year" textAlignment="CENTER" AnchorPane.leftAnchor="272.0" AnchorPane.rightAnchor="272.0" AnchorPane.topAnchor="460.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="10.0" layoutY="285.0" prefHeight="159.0" prefWidth="658.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <TableView fx:id="wrightTable" prefHeight="143.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="142.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="colW_Employee" prefWidth="75.0" text="ФИО" />
+                <TableColumn fx:id="colW_WorkType" prefWidth="75.0" text="Вид работ" />
+                  <TableColumn fx:id="colW_NumDay" prefWidth="75.0" text="День месяца" />
+                  <TableColumn fx:id="colW_WorkHours" prefWidth="130.0" text="Отработано" />
+                  <TableColumn fx:id="colW_OverHours" prefWidth="75.0" text="Переработка" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <VBox alignment="CENTER" layoutX="541.0" prefHeight="141.0" prefWidth="126.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addButtonClicked" text="Добавить" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#deleteButtonClicked" text="Удалить" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#WriteButtonClicked" text="Записать" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+   <opaqueInsets>
+      <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+   </opaqueInsets>
+</AnchorPane>
